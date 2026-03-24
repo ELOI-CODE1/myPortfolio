@@ -1,0 +1,50 @@
+<section id="projects" class="py-32 px-8 transition-colors duration-300"
+  [class]="theme.isDark() ? 'bg-gray-900 text-white' : 'bg-gray-50 text-gray-900'">
+
+  <div class="max-w-5xl mx-auto">
+
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <p class="text-cyan-400 tracking-[0.4em] uppercase text-sm mb-4">What I've Built</p>
+      <h2 class="text-5xl font-black tracking-tighter">
+        My <span class="text-cyan-400">Projects</span>
+      </h2>
+      <div class="w-16 h-1 bg-cyan-400 mx-auto mt-6"></div>
+    </div>
+
+    <!-- Projects grid -->
+    <div class="grid md:grid-cols-3 gap-6">
+      @for (project of projects; track project.title) {
+        <div class="group p-6 border transition-all duration-300 hover:border-cyan-400"
+          [class]="theme.isDark() ? 'border-gray-700 bg-gray-800' : 'border-gray-200 bg-white'">
+
+          <!-- Top accent line -->
+          <div class="w-8 h-1 bg-cyan-400 mb-6 group-hover:w-full transition-all duration-500"></div>
+
+          <h3 class="text-xl font-black tracking-tight mb-3">{{ project.title }}</h3>
+          <p class="text-sm leading-relaxed mb-6"
+            [class]="theme.isDark() ? 'text-gray-400' : 'text-gray-500'">
+            {{ project.description }}
+          </p>
+
+          <!-- Tags -->
+          <div class="flex flex-wrap gap-2 mb-6">
+            @for (tag of project.tags; track tag) {
+              <span class="text-xs px-2 py-1 tracking-widest uppercase"
+                [class]="theme.isDark() ? 'bg-gray-700 text-cyan-400' : 'bg-gray-100 text-cyan-600'">
+                {{ tag }}
+              </span>
+            }
+          </div>
+
+          <!-- Link -->
+          <a [href]="project.link"
+            class="text-xs tracking-widest uppercase text-cyan-400 hover:text-cyan-300 transition-colors">
+            View Project →
+          </a>
+        </div>
+      }
+    </div>
+
+  </div>
+</section>
