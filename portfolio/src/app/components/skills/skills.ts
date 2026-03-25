@@ -13,8 +13,8 @@ export class Skills {
   constructor(public theme: ThemeService) {}
 
   skills = [
-    { name: 'Python', level: 85, icon: '🐍' },
+    { name: 'Java', level: 75, icon: '🐍' },
     { name: 'HTML / CSS', level: 90, icon: '🎨' },
-    { name: 'SQL / Databases', level: 80, icon: '🗄️' },
+    { name: 'SQL / Databases', level: 70, icon: '🗄️' },
   ];
 }
