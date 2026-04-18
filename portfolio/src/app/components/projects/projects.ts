@@ -14,10 +14,10 @@ export class Projects {
 
   projects = [
     {
-      title: 'Project One',
-      description: 'A web application built with Python and SQL that solves a real-world problem.',
-      tags: ['Python', 'SQL', 'HTML/CSS'],
-      link: '#'
+      title: 'Del Coffee Website',
+      description: 'A modern coffee shop website with a clean and elegant design.',
+      tags: ['AngularJS', 'HTML/CSS', 'JavaScript'],
+      link: 'https://del-coffee.vercel.app/'
     },
     {
       title: 'Project Two',
