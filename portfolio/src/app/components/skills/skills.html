@@ -18,7 +18,8 @@
         <div>
           <div class="flex justify-between items-center mb-2">
             <span class="text-lg font-bold tracking-wider">
-              {{ skill.icon }} {{ skill.name }}
+              <img [src]="skill.icon" alt="skill.name" class="w-8 h-7 inline-block">
+              {{ skill.name }}
             </span>
             <span class="text-cyan-400 font-black text-sm tracking-widest">
               {{ skill.level }}%
