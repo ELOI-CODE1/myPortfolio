@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ThemeService } from '../../services/theme';
 
 @Component({
   selector: 'app-navbar',
@@ -10,9 +9,10 @@ import { ThemeService } from '../../services/theme';
   styleUrl: './navbar.css'
 })
 export class Navbar {
-  constructor(public theme: ThemeService) {}
-
-  toggleTheme() {
-    this.theme.toggle();
-  }
+  links = [
+    { label: 'About', href: '#about' },
+    { label: 'Skills', href: '#skills' },
+    { label: 'Projects', href: '#projects' },
+    { label: 'Contact', href: '#contact' }
+  ];
 }

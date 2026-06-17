@@ -1,37 +1,54 @@
-<section id="skills" class="py-32 px-8 transition-colors duration-300"
-  [class]="theme.isDark() ? 'bg-gray-950 text-white' : 'bg-white text-gray-900'">
+<section id="skills" class="relative py-32 px-8 bg-gray-950 text-white overflow-hidden">
 
-  <div class="max-w-4xl mx-auto">
+  <!-- subtle glow -->
+  <div class="absolute top-1/2 -right-20 w-72 h-72 rounded-full blur-3xl opacity-10 bg-violet-500"></div>
+  <div class="absolute top-10 -left-20 w-72 h-72 rounded-full blur-3xl opacity-10 bg-cyan-500"></div>
+
+  <div class="relative max-w-5xl mx-auto">
 
     <!-- Header -->
-    <div class="text-center mb-16">
+    <div class="text-center mb-16" appReveal>
       <p class="text-cyan-400 tracking-[0.4em] uppercase text-sm mb-4">What I Know</p>
       <h2 class="text-5xl font-black tracking-tighter">
         My <span class="text-cyan-400">Skills</span>
       </h2>
       <div class="w-16 h-1 bg-cyan-400 mx-auto mt-6"></div>
+      <p class="max-w-xl mx-auto mt-6 text-gray-400 leading-relaxed">
+        A toolkit I keep sharpening every day — from building polished interfaces to engineering
+        dependable back-end systems.
+      </p>
     </div>
 
-    <!-- Skills list -->
-    <div class="flex flex-col gap-8">
-      @for (skill of skills; track skill.name) {
-        <div>
-          <div class="flex justify-between items-center mb-2">
-            <span class="text-lg font-bold tracking-wider">
-              <img [src]="skill.icon" alt="skill.name" class="w-8 h-7 inline-block">
-              {{ skill.name }}
-            </span>
-            <span class="text-cyan-400 font-black text-sm tracking-widest">
+    <!-- Skills grid -->
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+      @for (skill of skills; track skill.name; let i = $index) {
+        <div [appReveal]="i * 90"
+          class="skill-card group relative flex flex-col items-center text-center p-8 rounded-2xl border border-gray-800 bg-gray-900/60 backdrop-blur-sm hover:border-cyan-400/60 hover:-translate-y-1.5 transition-all duration-300">
+
+          <!-- Progress ring + icon -->
+          <div class="relative w-28 h-28 mb-5">
+            <svg class="w-full h-full -rotate-90" viewBox="0 0 100 100">
+              <circle class="ring-bg" cx="50" cy="50" r="42" fill="none" stroke-width="6" />
+              <circle class="ring-fill" cx="50" cy="50" r="42" fill="none" stroke-width="6"
+                stroke-linecap="round"
+                [style.stroke-dasharray]="circumference"
+                [style.--ring-target]="ringOffset(skill.level)" />
+            </svg>
+            <!-- Icon centered -->
+            <div class="absolute inset-0 flex items-center justify-center">
+              <img [src]="skill.icon" [alt]="skill.name"
+                class="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300">
+            </div>
+            <!-- Percentage badge -->
+            <span class="absolute -bottom-1 left-1/2 -translate-x-1/2 px-2 py-0.5 text-[0.65rem] font-black rounded-full bg-cyan-400 text-black">
               {{ skill.level }}%
             </span>
           </div>
-          <!-- Track bar -->
-          <div class="w-full h-2 rounded-full"
-            [class]="theme.isDark() ? 'bg-gray-800' : 'bg-gray-200'">
-            <div class="h-2 rounded-full bg-cyan-400 transition-all duration-1000"
-              [style.width.%]="skill.level">
-            </div>
-          </div>
+
+          <h3 class="text-base font-bold tracking-wide">{{ skill.name }}</h3>
+          <p class="text-[0.65rem] tracking-[0.25em] uppercase text-cyan-400/80 mt-1">
+            {{ proficiency(skill.level) }}
+          </p>
         </div>
       }
     </div>

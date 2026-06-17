@@ -1,0 +1,28 @@
+:host {
+  display: block;
+}
+
+/* Progress ring track */
+.ring-bg {
+  stroke: rgba(255, 255, 255, 0.07);
+}
+
+/* Progress ring fill — starts empty, animates to its target when the
+   card scrolls into view (the appReveal directive adds .reveal-show). */
+.ring-fill {
+  stroke: #22d3ee; /* cyan-400 */
+  stroke-dashoffset: 264; /* ~full circumference = empty */
+  filter: drop-shadow(0 0 4px rgba(34, 211, 238, 0.6));
+  transition: stroke-dashoffset 1.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-show .ring-fill {
+  stroke-dashoffset: var(--ring-target);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ring-fill {
+    stroke-dashoffset: var(--ring-target);
+    transition: none;
+  }
+}
