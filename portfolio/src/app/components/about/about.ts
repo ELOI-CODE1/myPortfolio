@@ -14,7 +14,6 @@ export class About {
     { value: '3+', label: 'Years Experience' },
     { value: '10+', label: 'Projects Built' },
     { value: '6+', label: 'Technologies' },
-    { value: '100%', label: 'Passion' }
   ];
 
   highlights = [
