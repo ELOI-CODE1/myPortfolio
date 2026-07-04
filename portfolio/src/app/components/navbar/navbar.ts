@@ -6,7 +6,6 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './navbar.html',
-  styleUrl: './navbar.css'
 })
 export class Navbar {
   links = [
