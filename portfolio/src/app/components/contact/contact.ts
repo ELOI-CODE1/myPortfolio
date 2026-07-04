@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Reveal } from '../../directives/reveal'; // scroll-reveal animation directive
+import { Reveal } from '../../directives/reveal';
 
 @Component({
   selector: 'app-contact',
