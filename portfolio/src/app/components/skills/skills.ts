@@ -22,11 +22,4 @@ export class Skills {
     { name: 'Spring Boot', icon: '/images/spring.png' },
     { name: 'C', icon: '/images/c.png' }
   ];
-
-  proficiency(level: number): string {
-    if (level >= 85) return 'Expert';
-    if (level >= 70) return 'Advanced';
-    if (level >= 55) return 'Intermediate';
-    return 'Familiar';
-  }
 }
