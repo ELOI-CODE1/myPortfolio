@@ -23,11 +23,6 @@ export class Skills {
     { name: 'C', icon: '/images/c.png' }
   ];
 
-  /** Dash offset for a given skill level — full circle when 0, empty when 100. */
-  ringOffset(level: number): number {
-    return +(this.circumference * (1 - level / 100)).toFixed(1);
-  }
-
   proficiency(level: number): string {
     if (level >= 85) return 'Expert';
     if (level >= 70) return 'Advanced';
