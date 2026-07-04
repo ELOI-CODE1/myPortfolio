@@ -7,7 +7,6 @@ import { Reveal } from '../../directives/reveal';
   standalone: true,
   imports: [CommonModule, Reveal],
   templateUrl: './projects.html',
-  styleUrl: './projects.css'
 })
 export class Projects {
   projects = [
