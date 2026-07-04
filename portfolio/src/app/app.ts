@@ -18,7 +18,6 @@ import { Contact } from './components/contact/contact';
     Contact
   ],
   templateUrl: './app.html',
-  styleUrl: './app.css'
 })
 export class App {
   title = 'portfolio';

@@ -31,7 +31,7 @@ export class Hero {
   ];
 
   stats = [
-    { value: '3+', label: 'Years' },
+    { value: '1+', label: 'Years' },
     { value: '10+', label: 'Projects' },
     { value: '6+', label: 'Stacks' }
   ];
