@@ -7,7 +7,6 @@ import { Reveal } from '../../directives/reveal'; // scroll-reveal animation dir
   standalone: true,
   imports: [CommonModule, Reveal],
   templateUrl: './contact.html',
-  styleUrl: './contact.css'
 })
 export class Contact {
   year = new Date().getFullYear();
