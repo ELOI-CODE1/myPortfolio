@@ -15,12 +15,12 @@ export class Skills {
   readonly circumference = 2 * Math.PI * this.radius;
 
   skills = [
-    { name: 'Java', level: 75, icon: '/images/java.png' },
-    { name: 'HTML / CSS', level: 90, icon: '/images/html.png' },
-    { name: 'SQL / Databases', level: 70, icon: '/images/database.png' },
-    { name: 'Java Swing', level: 70, icon: '/images/swing.png' },
-    { name: 'Spring Boot', level: 60, icon: '/images/spring.png' },
-    { name: 'C', level: 50, icon: '/images/c.png' }
+    { name: 'Java', icon: '/images/java.png' },
+    { name: 'HTML / CSS', icon: '/images/html.png' },
+    { name: 'SQL / Databases', icon: '/images/database.png' },
+    { name: 'Java Swing', icon: '/images/swing.png' },
+    { name: 'Spring Boot', icon: '/images/spring.png' },
+    { name: 'C', icon: '/images/c.png' }
   ];
 
   /** Dash offset for a given skill level — full circle when 0, empty when 100. */
