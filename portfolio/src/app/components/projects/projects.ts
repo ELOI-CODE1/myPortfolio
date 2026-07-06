@@ -11,6 +11,12 @@ import { Reveal } from '../../directives/reveal';
 export class Projects {
   projects = [
     {
+      title: 'HEATH Tech Backend',
+      description: "Backend for the HEATH Tech platform — I'm contributing to the API and integrations.",
+      tags: ['Backend', 'REST API'],
+      contributingRepo: 'https://github.com/Open-Source-Kigali/heath-tech-backend'
+    },
+    {
       title: 'Del Coffee Website',
       description: 'A modern coffee shop website with a clean and elegant design.',
       tags: ['AngularJS', 'HTML/CSS', 'JavaScript'],

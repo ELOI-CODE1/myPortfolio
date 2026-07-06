@@ -41,8 +41,16 @@
             }
           </div>
 
-          <!-- Link -->
-          @if (project.link && project.link !== '#') {
+          <!-- Link / Contributing -->
+          @if (project.contributingRepo) {
+            <a [href]="project.contributingRepo"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 text-xs tracking-widest uppercase text-yellow-300 hover:text-yellow-200 transition-colors">
+              <span class="px-2 py-1 bg-yellow-700 text-black rounded text-[0.65rem] font-semibold">Contributing</span>
+              <span class="group-hover:translate-x-1 transition-transform">→</span>
+            </a>
+          } @else if (project.link && project.link !== '#') {
             <a [href]="project.link"
               target="_blank"
               rel="noopener noreferrer"
