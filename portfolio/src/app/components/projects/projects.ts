@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Reveal } from '../../directives/reveal';
+import { title } from 'process';
 
 @Component({
   selector: 'app-projects',
@@ -17,6 +18,12 @@ export class Projects {
       contributingRepo: 'https://github.com/Open-Source-Kigali/heath-tech-backend'
     },
     {
+      title: 'OPEN SOURCE KIGALI BACKEND',
+      description: "Backend for the official website of Open Source Kigali.",
+      tags: ['Express', 'TypeScript', 'Prisma', 'postgreSQL'],
+      contributingRepo: 'https://github.com/Open-Source-Kigali/osk-backend'
+    },
+    {
       title: 'Del Coffee Website',
       description: 'A modern coffee shop website with a clean and elegant design.',
       tags: ['AngularJS', 'HTML/CSS', 'JavaScript'],
@@ -30,7 +37,7 @@ export class Projects {
       link: 'https://nathan-pied-three.vercel.app/'
     },
     {
-      title: 'REVAS DebtFree',
+      title: 'REVAS DEBT MANAGMENT APP',
       description:
         'A cross-platform mobile app (iOS, Android & Web) for managing debtors, debts, and collections. Features secure login, role-based access, search, and a collections analytics dashboard. I built the mobile frontend and integrated it with a REST API backend.',
       tags: ['Mobile', 'REST API', 'Auth', 'RBAC'],
