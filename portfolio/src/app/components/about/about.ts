@@ -19,7 +19,8 @@ export class About {
     'Clean, maintainable, well-documented code',
     'Responsive, accessible, mobile-first design',
     'Full-stack delivery — front-end to database',
-    'Fast learner who loves new challenges'
+    'Fast learner who loves new challenges',
+    'Active open-source contributor — member of Open Source Kigali'
   ];
 
   stack = ['Angular', 'Java', 'Spring Boot', 'TypeScript', 'SQL', 'Tailwind CSS', 'Git'];
