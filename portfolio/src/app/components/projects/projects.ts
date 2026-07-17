@@ -13,7 +13,7 @@ export class Projects {
   projects = [
     {
       title: 'HEATH Tech Backend',
-      description: "Backend for the HEATH Tech platform — I'm contributing to the API and integrations.",
+      description: "Backend for the HEATH Tech platform — I'm contributing to the Backend side.",
       tags: ['Backend', 'REST API'],
       contributingRepo: 'https://github.com/Open-Source-Kigali/heath-tech-backend'
     },
